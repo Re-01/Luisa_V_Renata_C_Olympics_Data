@@ -40,18 +40,18 @@ bronze_pertencage = int(len(bronze)) / totalMedals * 100
 
 print(gold_pertencage, silver_pertencage, bronze_pertencage)
 
-print('Count', line_count, 'Total all medals:', totalMedals)
+print('processed', line_count, 'lines of data. Total medals:', totalMedals)
 
 
 labels = "Gold", "Silver", "Bronze"
-sizes = [159, 171, 127]
-colors = ["moccasin", "lightgrey", "burlywood"]
+sizes = [167, 319, 167]
+colors = ["lightseagreen", "palegreen", "deepskyblue"]
 explode = (0.1, 0.1, 0.1)
 
 plt.pie(sizes, explode=explode, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
 
 plt.axis('equal')
 plt.legend(labels, loc=1)
-plt.title("NORWAY MEDALS HAVE WON")
+plt.title("USA MEDALS HAVE WON")
 plt.xlabel("Medals since 1924")
 plt.show()

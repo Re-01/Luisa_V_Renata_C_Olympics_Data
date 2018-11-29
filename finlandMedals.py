@@ -27,8 +27,8 @@ with open('data/OlympicsWinter.csv') as csvfile:
                 bronze.append(row[7])
                 line_count += 1
 
-print(len(gold), 'gold medals have won since \'1924')
-print(len(silver), 'silver medals have been won since \'1924')
+print(len(gold), 'Gold medals have won since \'1924')
+print(len(silver), 'Silver medals have been won since \'1924')
 print(len(bronze), 'bronze medals have been won since \'1924')
 
 totalMedals = len(gold) + len(silver) + len(bronze)
@@ -40,18 +40,18 @@ bronze_pertencage = int(len(bronze)) / totalMedals * 100
 
 print(gold_pertencage, silver_pertencage, bronze_pertencage)
 
-print('Count', line_count, 'Total all medals:', totalMedals)
+print('count', line_count, 'Total all medals:', totalMedals)
 
 
 labels = "Gold", "Silver", "Bronze"
-sizes = [159, 171, 127]
-colors = ["moccasin", "lightgrey", "burlywood"]
+sizes = [66, 147, 221]
+colors = ["gold", "darkgray", "brown"]
 explode = (0.1, 0.1, 0.1)
 
 plt.pie(sizes, explode=explode, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
 
 plt.axis('equal')
 plt.legend(labels, loc=1)
-plt.title("NORWAY MEDALS HAVE WON")
+plt.title("FINLAND MEDALS HAVE WON")
 plt.xlabel("Medals since 1924")
 plt.show()
