@@ -88,5 +88,5 @@ plt.pie(sizes, explode=explode, colors=colors, autopct='%1.1f%%', shadow=True, s
 plt.axis('equal')
 plt.legend(labels, loc=1)
 plt.title("SILVER MEDALS WON IN THREE COUNTRIES")
-plt.xlabel("Silver Medals from 1924 and 1972")
+plt.xlabel("Silver Medals from 1924, 1948, and 1972")
 plt.show()
