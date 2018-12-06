@@ -1,5 +1,6 @@
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
 
 category = []
 gold = []
@@ -43,6 +44,7 @@ print(gold_pertencage, silver_pertencage, bronze_pertencage)
 print('count', line_count, 'Total all medals:', totalMedals)
 
 
+# Pie Chart
 labels = "Gold", "Silver", "Bronze"
 sizes = [66, 147, 221]
 colors = ["gold", "darkgray", "brown"]
@@ -54,4 +56,18 @@ plt.axis('equal')
 plt.legend(labels, loc=1)
 plt.title("FINLAND MEDALS HAVE WON")
 plt.xlabel("Medals since 1924")
+plt.show()
+
+# Stacked Bar Graph
+labels = "Gold", "Silver", "Bronze"
+sizes = 66, 147, 221
+ind = np.arange(len(labels))
+colors = ["gold", "darkgray", "brown"]
+width = 0.39
+
+plt.bar(ind, sizes, color=colors)
+
+plt.ylabel('Count of all medals')
+plt.xticks(ind, labels)
+plt.title("FINLAND MEDALS HAVE WON SINCE 1924")
 plt.show()
