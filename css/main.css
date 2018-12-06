@@ -9,7 +9,7 @@
 .container{
   margin: 0 auto;
 	width: 1200px;
-	background-color: #f5f1ee
+	background-color: #fff;
   padding: 20px;
   display:flex;
   flex-direction: column;
@@ -23,12 +23,20 @@
   justify-content: space-evenly;
 }
 
+.medals
+{
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #434343;
+}
 
 p
 {
   font-family: helvetica, sans-serif;
-  size: 14px;
+  font-size: 14px;
   line-height: 16px;
+  color: #434343;
 }
 
 .analysis

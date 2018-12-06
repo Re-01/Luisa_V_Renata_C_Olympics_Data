@@ -1,5 +1,6 @@
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
 
 category = []
 germany = []
@@ -78,6 +79,7 @@ print(germany_pertencage, finland_pertencage, italy_pertencage)
 
 print('count', line_count, 'total silver medals:', totalSilverMedals)
 
+# Pie Chart
 labels = "Germany", "Finland", "Italy"
 sizes = [germany_pertencage, finland_pertencage, italy_pertencage]
 colors = ["dimgrey", "darkgrey", "gainsboro"]
@@ -89,4 +91,25 @@ plt.axis('equal')
 plt.legend(labels, loc=1)
 plt.title("SILVER MEDALS WON IN THREE COUNTRIES")
 plt.xlabel("Silver Medals from 1924, 1948, and 1972")
+plt.show()
+
+# Horizontal bar chart
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+labels = "Germany", "Finland", "Italy"
+sizes = [germany_pertencage, finland_pertencage, italy_pertencage]
+colors = ["dimgrey", "darkgrey", "gainsboro"]
+
+plt.rcdefaults()
+fig, ax = plt.subplots()
+
+y_ind = np.arange(len(labels))
+error = np.random.rand(len(labels))
+ax.barh(y_ind, sizes, xerr=error, align='center', color=colors)
+ax.set_yticks(y_ind)
+ax.set_yticklabels(labels)
+ax.invert_yaxis()
+ax.set_xlabel("Total silver medals in 1924, 1948, and 1972")
+ax.set_title("SILVER MEDALS WON IN THREE COUNTRIES")
 plt.show()
